@@ -26,6 +26,12 @@ app.post('/events',(req,res) => {
         console.log(error.message);
     });
 
+      //Query bus service
+      axios.post('http://localhost:4003/events', event).catch((error) =>{
+        console.log(error.message);
+    });
+
+
     res.send({ status : 'OK'});
 
 })
